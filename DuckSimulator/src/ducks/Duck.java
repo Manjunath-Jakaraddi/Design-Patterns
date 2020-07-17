@@ -12,8 +12,4 @@ public class Duck {
     public void swim() {
         System.out.println("General Duck float");
     }
-
-    public void fly() {
-        System.out.println("General Duck Fly");
-    }
 }

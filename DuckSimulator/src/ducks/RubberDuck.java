@@ -1,6 +1,6 @@
 package ducks;
 
-public class RubberDuck extends Duck{
+public class RubberDuck extends Duck {
     public void quack() {
         System.out.println("Silent No Quack");
     }
