@@ -1,8 +1,13 @@
 package ducks;
 
+import ducks.fly.FlyNoWay;
+import ducks.quack.Squeak;
+
 public class RubberDuck extends Duck {
-    public void quack() {
-        System.out.println("Silent No Quack");
+
+    public RubberDuck() {
+        flyBehaviour =  new FlyNoWay();
+        quackBehaviour = new Squeak();
     }
 
     public void display() {

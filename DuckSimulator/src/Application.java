@@ -5,23 +5,24 @@ import ducks.RubberDuck;
 
 public class Application {
     public static void main(String[] args) {
-        // Cannot use polymorphism as Flyable exists only in some Ducks
-        MallardDuck mallardDuck = new MallardDuck();
-        mallardDuck.quack();
+        // Can change dynamically the fly and quack behavious at run time
+        // code reuse included as no same multiple different fly methods for each duck
+        Duck mallardDuck = new MallardDuck();
+        mallardDuck.performFly();
+        mallardDuck.performQuack();
         mallardDuck.display();
         mallardDuck.swim();
-        mallardDuck.fly();
 
-        RedHeadDuck redheadDuck = new RedHeadDuck();
-        redheadDuck.quack();
+        Duck redheadDuck = new RedHeadDuck();
+        redheadDuck.performFly();
+        redheadDuck.performQuack();
         redheadDuck.display();
         redheadDuck.swim();
-        redheadDuck.fly();
 
         Duck rubberDuck = new RubberDuck();
-        rubberDuck.quack();
+        rubberDuck.performFly();
+        rubberDuck.performQuack();
         rubberDuck.display();
         rubberDuck.swim();
-        // rubberDuck.fly();
     }
 }
