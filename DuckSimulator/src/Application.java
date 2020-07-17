@@ -1,7 +1,9 @@
 import ducks.Duck;
 import ducks.MallardDuck;
+import ducks.ModelDuck;
 import ducks.RedHeadDuck;
 import ducks.RubberDuck;
+import ducks.fly.FlyRocketPowered;
 
 public class Application {
     public static void main(String[] args) {
@@ -24,5 +26,12 @@ public class Application {
         rubberDuck.performQuack();
         rubberDuck.display();
         rubberDuck.swim();
+
+        Duck modelDuck = new ModelDuck();
+        modelDuck.performFly();
+
+        // run time change the behaviour
+        modelDuck.setFlyBehaviour(new FlyRocketPowered());
+        modelDuck.performFly();
     }
 }

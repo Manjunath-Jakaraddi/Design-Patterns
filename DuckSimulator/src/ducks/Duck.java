@@ -18,6 +18,14 @@ public class Duck {
         flyBehaviour.fly();
     }
 
+    public void setQuackBehaviour(QuackBehaviour quackBehaviour) {
+        this.quackBehaviour = quackBehaviour;
+    }
+
+    public void setFlyBehaviour(FlyBehaviour flyBehaviour) {
+        this.flyBehaviour = flyBehaviour;
+    }
+
     public void display() {
         System.out.println("General Duck Display");
     }
