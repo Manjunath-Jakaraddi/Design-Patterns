@@ -2,7 +2,7 @@ package ducks.quack;
 
 public class Squeak implements QuackBehaviour {
     @Override
-    public void quack() {
-        System.out.println("Squeak Squeak");
+    public String quack() {
+        return "Squeak Squeak";
     }
 }

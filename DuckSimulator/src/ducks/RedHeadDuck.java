@@ -10,7 +10,7 @@ public class RedHeadDuck extends Duck {
         quackBehaviour = new Quack();
     }
 
-    public void display() {
-        System.out.println("RedHeadDuck Duck Display");
+    public String display() {
+        return "RedHead Duck Display";
     }
 }

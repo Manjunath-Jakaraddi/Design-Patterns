@@ -10,12 +10,12 @@ public class Duck {
 
     // Duck class no longer handles below behaviours and delegates them
     // which has flexibility to assign and change behaviours during run times
-    public void performQuack() {
-        quackBehaviour.quack();
+    public String performQuack() {
+        return quackBehaviour.quack();
     }
 
-    public void performFly() {
-        flyBehaviour.fly();
+    public String performFly() {
+        return flyBehaviour.fly();
     }
 
     public void setQuackBehaviour(QuackBehaviour quackBehaviour) {
@@ -26,11 +26,11 @@ public class Duck {
         this.flyBehaviour = flyBehaviour;
     }
 
-    public void display() {
-        System.out.println("General Duck Display");
+    public String display() {
+        return "General Duck Display";
     }
 
-    public void swim() {
-        System.out.println("General Duck float");
+    public String swim() {
+        return "General Duck float";
     }
 }

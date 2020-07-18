@@ -9,7 +9,7 @@ public class ModelDuck extends Duck {
         quackBehaviour = new MuteQuack();
     }
 
-    public void display() {
-        System.out.println("ModelDuck Display");
+    public String display() {
+        return "Model Duck Display";
     }
 }

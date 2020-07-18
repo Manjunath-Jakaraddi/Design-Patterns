@@ -10,7 +10,7 @@ public class RubberDuck extends Duck {
         quackBehaviour = new Squeak();
     }
 
-    public void display() {
-        System.out.println("RubberDuck Duck Display");
+    public String display() {
+        return "RubberDuck Duck Display";
     }
 }
