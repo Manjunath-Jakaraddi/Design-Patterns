@@ -7,6 +7,7 @@ public class StatisticsDisplay implements DisplayElement, Observer {
 
     public StatisticsDisplay(WeatherData weatherData) {
         this();
+        this.weatherData = weatherData;
         weatherData.registerObserver(this);
     }
 
