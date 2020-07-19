@@ -14,8 +14,18 @@ public class Mocha extends CondimentDecorator {
         return beverage.getDescription() + ", Mocha";
     }
 
+    public double getSizedCost() {
+        switch (getSize()) {
+            case TALL: return 0.2;
+            case VENTI: return 0.25;
+            case GRANDE: return 0.3;
+        }
+        return 0;
+    }
+
     @Override
     public double cost() {
-        return 0.2 + beverage.cost();
+        return getSizedCost() + beverage.cost();
     }
+
 }

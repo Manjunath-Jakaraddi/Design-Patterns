@@ -3,7 +3,7 @@ package beverage;
 public class Espresso extends Beverage {
 
     public Espresso() {
-        description = "Espresso";
+        description = " Espresso";
     }
 
     @Override
