@@ -27,7 +27,7 @@ public class Pizza {
         System.out.println("Cutting the pizza into diagonal pieces");
     }
 
-    public void box() {
+    public final void box() {
         System.out.println("Place pizza in official PizzaStore box");
     }
 

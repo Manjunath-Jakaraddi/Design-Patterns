@@ -1,14 +1,11 @@
 import pizza.Pizza;
 
-public class PizzaStore {
-    SimplePizzaFactory factory;
+public abstract class PizzaStore {
 
-    public PizzaStore(SimplePizzaFactory factory) {
-        this.factory = factory;
-    }
-
+    // in order to standardise the process making this class abstract and implementing
+    // it will enable us to constraint the process throught inheritence
     public Pizza orderPizza(String type) {
-        Pizza pizza = factory.createPizza(type);
+        Pizza pizza = createPizza(type);
 
         pizza.prepare();
         pizza.bake();
@@ -16,4 +13,6 @@ public class PizzaStore {
         pizza.box();
         return pizza;
     }
+
+    abstract Pizza createPizza(String type);
 }

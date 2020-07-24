@@ -13,12 +13,4 @@ public class ChicagoStyleCheesePizza extends Pizza {
         System.out.println("Cutting the pizza into square slices");
     }
 
-    // what if the the frachises started to pack pizza in third party boxes
-    // not follow the way of handling the pizza orders
-    // to standardise this there should be constraints on the certain functions
-    // should be called while preparing pizzas at the same time flexiblity also
-    // to be given to franchises to be able to modify
-    public void box() {
-        System.out.println("Place pizza in third party PizzaStore box");
-    }
 }
