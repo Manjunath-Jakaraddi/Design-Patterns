@@ -8,7 +8,7 @@ public class Pizza {
     String sauce;
     ArrayList<String> toppings = new ArrayList<>();
 
-    private void prepare() {
+    public void prepare() {
         System.out.println("Preparing " + name);
         System.out.println("Tossing dough...");
         System.out.println("Adding sauce...");
@@ -19,38 +19,19 @@ public class Pizza {
         System.out.println();
     }
 
-    void bake() {
+    public void bake() {
         System.out.println("Bake for 25 minutes at 350");
     }
 
-    void cut() {
+    public void cut() {
         System.out.println("Cutting the pizza into diagonal pieces");
     }
 
-    void box() {
+    public void box() {
         System.out.println("Place pizza in official PizzaStore box");
     }
 
     public String getName() {
         return name;
-    }
-
-    // As creating new pizza type is variable thing have to seperate it out
-    // Identifying aspects that vary and seperate them
-    public Pizza orderPizza(String type) {
-        Pizza pizza = null;
-
-        // need to be modified whenever a pizza is added or removed from menu
-        if(type.equals("cheese")) {
-            pizza = new CheesePizza();
-        } else if(type.equals("greek")) {
-            pizza = new GreekPizza();
-        }
-
-        pizza.prepare();
-        pizza.bake();
-        pizza.cut();
-        pizza.box();
-        return pizza;
     }
 }
