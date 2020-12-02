@@ -1,23 +1,15 @@
 package pizza;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class Pizza {
+public abstract class Pizza {
     String name;
     String dough;
     String sauce;
-    ArrayList<String> toppings = new ArrayList<>();
+    List<String> toppings = new ArrayList<>();
 
-    public void prepare() {
-        System.out.println("Preparing " + name);
-        System.out.println("Tossing dough...");
-        System.out.println("Adding sauce...");
-        System.out.print("Adding toppings:");
-        for(String topping: toppings) {
-            System.out.print(" " + topping);
-        }
-        System.out.println();
-    }
+    public abstract void prepare();
 
     public void bake() {
         System.out.println("Bake for 25 minutes at 350");
