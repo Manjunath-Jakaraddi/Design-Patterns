@@ -1,12 +1,12 @@
 package pizza.ingredients;
 
-import pizza.dough.Dough;
-import pizza.dough.ThinCrustDough;
-import pizza.sauce.MarinaraSauce;
-import pizza.sauce.Sauce;
-import pizza.toppings.Garlic;
-import pizza.toppings.Onion;
-import pizza.toppings.Topping;
+import pizza.ingredients.dough.Dough;
+import pizza.ingredients.dough.ThinCrustDough;
+import pizza.ingredients.sauce.MarinaraSauce;
+import pizza.ingredients.sauce.Sauce;
+import pizza.ingredients.toppings.Garlic;
+import pizza.ingredients.toppings.Onion;
+import pizza.ingredients.toppings.Topping;
 
 public class NYPizzaIngredientFactory implements PizzaIngredientFactory{
     @Override

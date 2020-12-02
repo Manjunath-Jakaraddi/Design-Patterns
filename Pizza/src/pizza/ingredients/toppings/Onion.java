@@ -1,4 +1,4 @@
-package pizza.toppings;
+package pizza.ingredients.toppings;
 
 public class Onion implements Topping{
     @Override

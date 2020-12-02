@@ -1,4 +1,4 @@
-package pizza.sauce;
+package pizza.ingredients.sauce;
 
 public class MarinaraSauce implements Sauce{
     @Override

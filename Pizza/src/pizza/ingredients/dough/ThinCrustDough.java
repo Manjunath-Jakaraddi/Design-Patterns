@@ -1,4 +1,4 @@
-package pizza.dough;
+package pizza.ingredients.dough;
 
 public class ThinCrustDough implements Dough {
     @Override

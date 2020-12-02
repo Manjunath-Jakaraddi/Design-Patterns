@@ -1,8 +1,8 @@
 package pizza.ingredients;
 
-import pizza.dough.Dough;
-import pizza.sauce.Sauce;
-import pizza.toppings.Topping;
+import pizza.ingredients.dough.Dough;
+import pizza.ingredients.sauce.Sauce;
+import pizza.ingredients.toppings.Topping;
 
 public interface PizzaIngredientFactory {
     public Dough createDough();

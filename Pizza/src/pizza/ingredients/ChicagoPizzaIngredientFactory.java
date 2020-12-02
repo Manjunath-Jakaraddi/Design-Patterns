@@ -1,12 +1,12 @@
 package pizza.ingredients;
 
-import pizza.dough.Dough;
-import pizza.dough.ThickCrustDough;
-import pizza.sauce.PlumTomatoSauce;
-import pizza.sauce.Sauce;
-import pizza.toppings.Mushroom;
-import pizza.toppings.RedPepper;
-import pizza.toppings.Topping;
+import pizza.ingredients.dough.Dough;
+import pizza.ingredients.dough.ThickCrustDough;
+import pizza.ingredients.sauce.PlumTomatoSauce;
+import pizza.ingredients.sauce.Sauce;
+import pizza.ingredients.toppings.Mushroom;
+import pizza.ingredients.toppings.RedPepper;
+import pizza.ingredients.toppings.Topping;
 
 public class ChicagoPizzaIngredientFactory implements PizzaIngredientFactory {
     @Override
