@@ -1,8 +1,10 @@
 import ceilingfan.CeilingFan;
 import commands.CeilingFanHighCommand;
 import commands.CeilingFanOffCommand;
+import commands.Command;
 import commands.LightOffCommand;
 import commands.LightOnCommand;
+import commands.MacroCommand;
 import commands.StereoOffCommand;
 import commands.StereoOnWithCDCommand;
 import light.Light;
@@ -53,5 +55,16 @@ public class RemoteTester {
         remoteControl.onButtonWasPushed(4);
         remoteControl.offButtonWasPushed(4);
         remoteControl.undoButtonWasPushed();
+
+        Command[] partyOn = { lightOnCommand1, stereoOnWithCDCommand, ceilingFanHighCommand};
+        Command[] partyEnd = { lightOffCommand1, stereoOffCommand, ceilingFanOffCommand };
+        MacroCommand partyOnCommand = new MacroCommand(partyOn);
+        MacroCommand partyEndCommand = new MacroCommand(partyEnd);
+
+        System.out.println("\n\nLet the Party Begin :)");
+        remoteControl.setCommand(5, partyOnCommand, partyEndCommand);
+        remoteControl.onButtonWasPushed(5);
+        System.out.println("\n\nEnd of party :(");
+        remoteControl.offButtonWasPushed(5);
     }
 }

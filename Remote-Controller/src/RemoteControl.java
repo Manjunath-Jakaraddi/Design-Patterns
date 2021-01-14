@@ -29,7 +29,7 @@ public class RemoteControl {
             offCommands[slot-1] = offCommand;
             return;
         }
-        System.err.println("Error: Invalid Slot " + slot);
+        System.out.println("Error: Invalid Slot " + slot);
     }
 
     public void onButtonWasPushed(int slot) {
@@ -38,7 +38,7 @@ public class RemoteControl {
             undoCommand = offCommands[slot-1];
             return;
         }
-        System.err.println("Error: Invalid Slot " + slot);
+        System.out.println("Error: Invalid Slot " + slot);
     }
 
     public void offButtonWasPushed(int slot) {
@@ -47,7 +47,7 @@ public class RemoteControl {
             undoCommand = onCommands[slot-1];
             return;
         }
-        System.err.println("Error: Invalid Slot " + slot);
+        System.out.println("Error: Invalid Slot " + slot);
     }
 
     public void undoButtonWasPushed() {
