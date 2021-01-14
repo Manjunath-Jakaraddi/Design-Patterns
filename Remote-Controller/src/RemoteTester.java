@@ -67,4 +67,17 @@ public class RemoteTester {
         System.out.println("\n\nEnd of party :(");
         remoteControl.offButtonWasPushed(5);
     }
+    /**
+     * More use cases of Command Pattern
+     * 1. Commands give us a way to package a piece of computation (a receiver and a set of actions) and pass it around as a first-class object
+     *    Imagine a job queue: you add commands to the queue on one end, and on the other end sits a group of threads. Threads run the following script:
+     *      they remove a command from the queue,
+     *      call its execute() method,
+     *      wait for the call to finish,
+     *      and then discard the command object and retrieve a new one.
+     *      so it can be used in  schedulers, thread pools, and job queues
+     * 2. When needed to run transactions each commands inside the transaction can be broken
+     *    down to similar type of such commands and when we proceed with execution we store the order if
+     *    crash was supposed to happen we undo the commands in the same order to reverse the transaction
+     */
 }
