@@ -1,0 +1,30 @@
+Also known as demeters law
+States that: Talk only to your immediate friends
+
+public float getTemp() {
+    return station.getThermometer().getTemperature();
+}
+Here not the current method need not know about the new Object Temperatur being returned by (station.getThermometer())
+
+Which all objects methods it is ok to access
+1. The Object itself
+2. Objects passed as parameters to the methods
+3. Object that is instantiated within the method
+4. The composed objects in the class.
+
+public class Car {
+    Engine engine; // we can access this objects methods
+
+    public Car() {}
+
+    public void start(Key key) {  // can access key objects methods
+        Doors doors = new Doors();  // can access doors objects methods
+        updateDisplay(); // can access this objects methods
+        key.getLeftButton().click(); // not allowed as this method should not have know ledge of button objects
+        key.clickLeftButton(); // can be handled by exposing method which does the same without accessing the object
+    }
+
+    public void updateDisplay() {
+
+    }
+}
